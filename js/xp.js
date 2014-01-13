@@ -1,6 +1,7 @@
 function calculate(){
-    // fetch value without , or .
-    var xp = document.getElementById(0).value.replace(/(\,|\.)/g, '');
+    // fetch values without , or .
+    var xp        = document.getElementById(0).value.replace(/(\,|\.)/g, '');
+    var xp_custom = document.getElementById('custom').value.replace(/(\,|\.)/g, '');
 
     if(!isNaN(xp)){
         xp = parseInt(xp);
@@ -26,7 +27,7 @@ function calculate(){
 
         // custom value entered by the user
         document.getElementById('custom-span').innerHTML = (xp /
-            parseInt(document.getElementById('custom').value) * 100
+            parseInt(xp_custom) * 100
         ).toFixed(7);
     }
 }
