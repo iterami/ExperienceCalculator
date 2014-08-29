@@ -38,4 +38,4 @@ window.onkeydown = function(e){
     if((key.charCode ? key.charCode : key.keyCode) === 13){
         calculate();
     }
-}
+};
