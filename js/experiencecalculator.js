@@ -1,5 +1,5 @@
 function calculate(){
-    // fetch values without , or .
+    // Fetch values without , or ..
     var xp        = document.getElementById(0).value.replace(/(\,|\.)/g, '');
     var xp_custom = document.getElementById('custom').value.replace(/(\,|\.)/g, '');
 
@@ -25,7 +25,7 @@ function calculate(){
         document.getElementById(10).innerHTML = (xp /   385954   ).toFixed(7);
         document.getElementById(11).innerHTML = (xp /  1493754   ).toFixed(7);
 
-        // custom value entered by the user
+        // Custom value entered by the user.
         document.getElementById('custom-span').innerHTML = (xp /
             parseInt(xp_custom) * 100
         ).toFixed(7);
@@ -33,9 +33,11 @@ function calculate(){
 }
 
 window.onkeydown = function(e){
-    // if enter key is pressed, calculate
     var key = window.event ? event : e;
-    if((key.charCode ? key.charCode : key.keyCode) === 13){
+    key = key.charCode ? key.charCode : key.keyCode;
+
+    // ENTER: calculate.
+    if(key === 13){
         calculate();
     }
 };
