@@ -28,8 +28,7 @@ function calculate(){
 }
 
 window.onkeydown = function(e){
-    var key = window.event ? event : e;
-    key = key.charCode ? key.charCode : key.keyCode;
+    var key = e.keyCode || e.which;
 
     // ENTER: calculate.
     if(key === 13){
