@@ -11,3 +11,6 @@ input{
     color: #aaa;
     text-align: center;
 }
+pre{
+    margin: 0;
+}

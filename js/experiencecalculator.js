@@ -3,7 +3,7 @@ function calculate(){
     var xp = document.getElementById('xp').value.replace(/(\,|\.)/g, '');
 
     if(isNaN(xp)){
-        return;
+        xp = 0;
     }
 
     xp = parseInt(xp);
