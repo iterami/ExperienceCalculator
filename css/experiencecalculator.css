@@ -11,6 +11,9 @@ input{
     color: #aaa;
     text-align: center;
 }
+input[type=button]{
+    cursor: pointer;
+}
 pre{
     margin: 0;
 }
