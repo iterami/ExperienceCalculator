@@ -1,3 +1,5 @@
+'use strict';
+
 function calculate(){
     // Fetch XP value without , or ..
     var xp = document.getElementById('xp').value.replace(/(\,|\.)/g, '');
