@@ -2,13 +2,7 @@
 
 function calculate(){
     // Fetch XP value without , or ..
-    var xp = document.getElementById('xp').value.replace(/(\,|\.)/g, '');
-
-    if(isNaN(xp)){
-        xp = 0;
-    }
-
-    xp = parseInt(xp);
+    var xp = parseInt(document.getElementById('xp').value.replace(/(\,|\.)/g, ''));
 
     // Diablo 2 and Diablo 2: Lord of Destruction
     document.getElementById('d2lod-99').innerHTML = (xp / 38377390.17).toFixed(7); // Level 99
@@ -20,12 +14,9 @@ function calculate(){
     document.getElementById('rs-f2p').innerHTML = (xp / 32000038.8).toFixed(7); // Max F2P XP
     document.getElementById('rs-p2p').innerHTML = (xp / 52000000).toFixed(7); // Max Member XP
 
-    // Fetch custom XP goal without , or ..
-    var xp_custom = document.getElementById('custom').value.replace(/(\,|\.)/g, '');
-
-    // Custom value entered by the user.
+    // Fetch and calculate custom XP goal without decimal mark or thousands separator.
     document.getElementById('custom-span').innerHTML = (xp /
-      parseInt(xp_custom) * 100
+      parseInt(document.getElementById('custom').value.replace(/(\,|\.)/g, '')) * 100
     ).toFixed(7);
 }
 
