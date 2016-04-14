@@ -29,3 +29,10 @@ window.onkeydown = function(e){
         calculate();
     }
 };
+
+window.onload = function(e){
+    // Fetch saved experience value.
+    document.getElementById('xp').value = window.location.search.substring(1) || 0;
+
+    calculate();
+};
