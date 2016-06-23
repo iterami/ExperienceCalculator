@@ -27,16 +27,15 @@ function calculate(){
     };
 }
 
-window.onkeydown = function(e){
-    var key = e.keyCode || e.which;
-
-    // ENTER: calculate.
-    if(key === 13){
-        calculate();
-    }
-};
-
 window.onload = function(e){
+    init_input(
+      {
+        13: {
+          'todo': calculate,
+        },
+      }
+    );
+
     // Fetch saved experience value.
     document.getElementById('xp').value = window.location.search.substring(1) || 0;
 
