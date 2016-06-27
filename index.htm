@@ -2,22 +2,24 @@
 <meta charset=utf-8>
 <meta content="width=device-width,initial-scale=1" name=viewport>
 <title>ExperienceCalculator.htm</title>
-<link href=css/experiencecalculator.css rel=stylesheet>
+<link href=../common/css/dom.css rel=stylesheet>
 
-xp = <input id=xp value=0><input onclick=calculate() type=button value="Calculate [ENTER]">
-<hr>
-<b>Custom:</b>
-<pre>xp / <input id=custom-xp value=0> = <span id=custom></span>%</pre>
-<hr>
-<b>Diablo 2</b> and <b>Diablo 2: Lord of Destruction</b>:
-<pre>xp / 3837739017 = <span id=d2lod-99></span>% of level 99</pre>
-<hr>
-<b>RuneScape</b>:
-<pre>xp /   13034431 = <span id=rs-99></span>% of level 99
+<div class=left>
+    xp = <input id=xp value=0><input onclick=calculate() type=button value="Calculate [ENTER]">
+    <hr>
+    <b>Custom:</b>
+    <pre>xp / <input id=custom-xp value=0> = <span id=custom></span>%</pre>
+    <hr>
+    <b>Diablo 2</b> and <b>Diablo 2: Lord of Destruction</b>:
+    <pre>xp / 3837739017 = <span id=d2lod-99></span>% of level 99</pre>
+    <hr>
+    <b>RuneScape</b>:
+    <pre>xp /   13034431 = <span id=rs-99></span>% of level 99
 xp /  104273167 = <span id=rs-120></span>% of level 120
 xp /  200000000 = <span id=rs-max></span>% of Max Experience in any Skill
 xp / 3200003880 = <span id=rs-f2p></span>% of Max Total F2P Experience
-xp / 5200000000 = <span id=rs-p2p></span>% of Max Total Member Experience
+xp / 5200000000 = <span id=rs-p2p></span>% of Max Total Member Experience</pre>
+</div>
 
 <script src=../common/js/input.js></script>
 <script src=js/experiencecalculator.js></script>
