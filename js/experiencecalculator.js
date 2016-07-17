@@ -1,6 +1,8 @@
 'use strict';
 
 function calculate(){
+    settings_save();
+
     // Fetch XP value without , or ..
     var xp = parseInt(
       document.getElementById('xp').value.replace(/(\,|\.)/g, ''),
@@ -35,9 +37,13 @@ window.onload = function(e){
         },
       }
     );
+    settings_init(
+      'KeyInfo.htm-',
+      {
+        'xp': 0,
+      }
+    );
 
-    // Fetch saved experience value.
-    document.getElementById('xp').value = window.location.search.substring(1) || 0;
-
+    settings_update();
     calculate();
 };
