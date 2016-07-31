@@ -30,19 +30,14 @@ function calculate(){
 }
 
 window.onload = function(e){
-    input_init(
-      {
-        13: {
-          'todo': calculate,
-        },
-      }
-    );
     settings_init(
       'KeyInfo.htm-',
       {
         'xp': 0,
       }
     );
+
+    document.getElementById('xp').oninput = calculate;
 
     settings_update();
     calculate();
