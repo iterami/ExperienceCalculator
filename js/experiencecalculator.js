@@ -33,7 +33,7 @@ window.onload = function(e){
     settings_init(
       'KeyInfo.htm-',
       {
-        'xp': 0,
+        'xp': '0',
       }
     );
 
