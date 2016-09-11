@@ -31,7 +31,7 @@ function calculate(){
 
 window.onload = function(e){
     settings_init(
-      'KeyInfo.htm-',
+      'ExperienceCalculator.htm-',
       {
         'xp': '0',
       }
