@@ -30,12 +30,12 @@ function calculate(){
 }
 
 window.onload = function(e){
-    settings_init(
-      'ExperienceCalculator.htm-',
-      {
+    settings_init({
+      'prefix': 'ExperienceCalculator.htm-',
+      'settings': {
         'xp': '0',
-      }
-    );
+      },
+    });
 
     document.getElementById('xp').oninput = calculate;
 
