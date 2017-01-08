@@ -37,6 +37,7 @@ window.onload = function(e){
       },
     });
 
+    document.getElementById('custom-xp').oninput = calculate;
     document.getElementById('xp').oninput = calculate;
 
     settings_update();
