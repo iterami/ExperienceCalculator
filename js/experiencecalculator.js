@@ -1,7 +1,7 @@
 'use strict';
 
 function calculate(){
-    settings_save();
+    storage_save();
 
     // Fetch XP value without , or ..
     var xp = parseInt(
@@ -30,16 +30,16 @@ function calculate(){
 }
 
 window.onload = function(e){
-    settings_init({
-      'prefix': 'ExperienceCalculator.htm-',
-      'settings': {
+    storage_init({
+      'data': {
         'xp': '0',
       },
+      'prefix': 'ExperienceCalculator.htm-',
     });
 
     document.getElementById('custom-xp').oninput = calculate;
     document.getElementById('xp').oninput = calculate;
 
-    settings_update();
+    storage_update();
     calculate();
 };
