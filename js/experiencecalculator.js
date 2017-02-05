@@ -11,7 +11,7 @@ function calculate(){
 
     var ids = {
       // Diablo 2 and Diablo 2: Lord of Destruction
-      'd2lod-99': 38377390.17,
+      'd2lod-99': 35204852.54,
       // Runescape
       'rs-99': 130344.31,
       'rs-120': 1042731.67,
