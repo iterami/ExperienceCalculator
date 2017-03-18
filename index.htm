@@ -4,22 +4,51 @@
 <title>ExperienceCalculator.htm</title>
 <link href=../common/css/dom.css rel=stylesheet>
 
-<div class=left>
-    xp = <input id=xp>
-    <hr>
-    Custom:
-    <pre>xp / <input id=custom-xp value=0> = <span id=custom></span>%</pre>
-    <hr>
-    Diablo 2 and Diablo 2: Lord of Destruction:
-    <pre>xp / 3837739017 = <span id=d2lod-99></span>% of level 99</pre>
-    <hr>
-    RuneScape:
-    <pre>xp /   13034431 = <span id=rs-99></span>% of level 99
-xp /  104273167 = <span id=rs-120></span>% of level 120
-xp /  200000000 = <span id=rs-max></span>% of Max Experience in any Skill
-xp / 3200003880 = <span id=rs-f2p></span>% of Max Total F2P Experience
-xp / 5200000000 = <span id=rs-p2p></span>% of Max Total Member Experience</pre>
-</div>
+<table>
+  <tr>
+    <td>XP
+    <td colspan=2><input id=xp>
+  <tr class=header>
+    <td>Other
+    <td>Experience Required
+    <td>Percentage
+  <tr>
+    <td>Custom
+    <td>XP / <input id=custom-xp value=0>
+    <td><span id=custom></span>%
+  <tr class=header>
+    <td>Diablo 2
+    <td>Experience Required
+    <td>Percentage
+  <tr>
+    <td>Level 99
+    <td>XP / 3,837,739,017
+    <td><span id=d2lod-99></span>%
+  <tr class=header>
+    <td>RuneScape
+    <td>Experience Required
+    <td>Percentage
+  <tr>
+    <td>99
+    <td>XP / 13,034,431
+    <td><span id=rs-99></span>%
+  <tr>
+    <td>120
+    <td>XP / 104,273,167
+    <td><span id=rs-120></span>%
+  <tr>
+    <td>Max Experience in any Skill
+    <td>XP / 200,000,000
+    <td><span id=rs-max></span>%
+  <tr>
+    <td>Max Total F2P Experience
+    <td>XP / 3,200,003,880
+    <td><span id=rs-f2p></span>%
+  <tr>
+    <td>Max Total Member Experience
+    <td>XP / 5,200,000,000
+    <td><span id=rs-p2p></span>%
+</table>
 
 <script src=../common/js/core.js></script>
 <script src=../common/js/storage.js></script>
