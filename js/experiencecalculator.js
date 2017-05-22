@@ -1,7 +1,7 @@
 'use strict';
 
 function calculate(){
-    storage_save();
+    core_storage_save();
 
     // Fetch XP value without , or ..
     var xp = sanitize_integer('xp');
@@ -31,7 +31,7 @@ function sanitize_integer(id){
 }
 
 window.onload = function(e){
-    storage_init({
+    core_storage_init({
       'data': {
         'custom-xp': '0',
         'xp': '0',
@@ -42,6 +42,6 @@ window.onload = function(e){
     document.getElementById('custom-xp').oninput = calculate;
     document.getElementById('xp').oninput = calculate;
 
-    storage_update();
+    core_storage_update();
     calculate();
 };
