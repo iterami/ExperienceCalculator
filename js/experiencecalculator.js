@@ -23,14 +23,7 @@ function calculate(){
     };
 }
 
-function sanitize_integer(id){
-    return parseInt(
-      document.getElementById(id).value.replace(/(\,|\.)/g, ''),
-      10
-    );
-}
-
-window.onload = function(e){
+function repo_init(){
     core_storage_init({
       'data': {
         'custom-xp': '0',
@@ -44,4 +37,11 @@ window.onload = function(e){
 
     core_storage_update();
     calculate();
-};
+}
+
+function sanitize_integer(id){
+    return parseInt(
+      document.getElementById(id).value.replace(/(\,|\.)/g, ''),
+      10
+    );
+}
