@@ -24,12 +24,12 @@ function calculate(){
 }
 
 function repo_init(){
-    core_storage_init({
-      'data': {
+    core_repo_init({
+      'storage': {
         'custom-xp': '0',
         'xp': '0',
       },
-      'prefix': 'ExperienceCalculator.htm-',
+      'title': 'ExperienceCalculator.htm',
     });
 
     document.getElementById('custom-xp').oninput = calculate;
