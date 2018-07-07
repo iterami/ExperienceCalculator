@@ -24,7 +24,7 @@ function calculate(){
 }
 
 function sanitize_integer(id){
-    return parseInt(
+    return Number.parseInt(
       document.getElementById(id).value.replace(/(\,|\.)/g, ''),
       10
     );
