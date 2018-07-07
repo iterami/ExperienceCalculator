@@ -25,7 +25,10 @@ function calculate(){
 
 function sanitize_integer(id){
     return Number.parseInt(
-      document.getElementById(id).value.replace(/(\,|\.)/g, ''),
+      document.getElementById(id).value.replace(
+        /(\,|\.)/g,
+        ''
+      ),
       10
     );
 }
