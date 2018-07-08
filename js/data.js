@@ -4,9 +4,9 @@ function calculate(){
     core_storage_save();
 
     // Fetch XP value without , or ..
-    var xp = sanitize_integer('xp');
+    let xp = sanitize_integer('xp');
 
-    var ids = {
+    let ids = {
       // Other
       'custom': sanitize_integer('custom-xp') / 100,
       // Diablo 2
@@ -18,7 +18,7 @@ function calculate(){
       'rs-max': 2000000,
       'rs-p2p': 52000000,
     };
-    for(var id in ids){
+    for(let id in ids){
         document.getElementById(id).innerHTML = (xp / ids[id]).toFixed(7);
     };
 }
