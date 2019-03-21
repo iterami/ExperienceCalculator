@@ -19,7 +19,9 @@ function calculate(){
       'rs-p2p': 52000000,
     };
     for(let id in ids){
-        document.getElementById(id).innerHTML = (xp / ids[id]).toFixed(7);
+        document.getElementById(id).innerHTML = core_round({
+          'number': xp / ids[id],
+        });
     };
 }
 
