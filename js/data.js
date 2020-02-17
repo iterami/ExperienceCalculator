@@ -4,9 +4,9 @@ function calculate(){
     core_storage_save();
 
     // Fetch XP value without , or ..
-    let xp = sanitize_integer('xp');
+    const xp = sanitize_integer('xp');
 
-    let ids = {
+    const ids = {
       // Other
       'custom': sanitize_integer('custom-xp') / 100,
       // Diablo 2
@@ -18,7 +18,7 @@ function calculate(){
       'rs-max': 2000000,
       'rs-p2p': 52000000,
     };
-    for(let id in ids){
+    for(const id in ids){
         document.getElementById(id).textContent = core_round({
           'number': xp / ids[id],
         });
